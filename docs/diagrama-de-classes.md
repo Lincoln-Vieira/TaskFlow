@@ -29,4 +29,4 @@ classDiagram
     TasksModule --> Task : gerencia
 ```
 
-**Observação:** o diagrama apresenta os conceitos e as responsabilidades do sistema. `TasksModule` representa o módulo `tasks.py`, que contém as funções de gerenciamento das tarefas. `WebApp` representa conceitualmente a aplicação web.
+**Observação:** o diagrama representa conceitualmente a estrutura e as responsabilidades do sistema. `Task` representa os dados de uma tarefa, armazenados como dicionário no código Python. `TasksModule` representa o módulo `tasks.py`, responsável pelas operações de gerenciamento, e `WebApp` representa as rotas e funções da aplicação Flask.

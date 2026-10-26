@@ -58,25 +58,16 @@ Nesta primeira versão, as tarefas ficam armazenadas em memória. Isso significa
 
 ## 8. Mudança de escopo simulada
 
-**Escopo inicial:** cadastrar, listar, editar e excluir tarefas, utilizando título e descrição.
+**Escopo inicial:** desenvolver um sistema básico de gerenciamento de tarefas com cadastro, listagem, edição e exclusão, incluindo título, descrição, prioridade e status.
 
-**Mudança de escopo:** adicionar prioridades (Baixa, Média e Alta) e permitir a atualização do status das tarefas (A Fazer, Em Progresso e Concluído).
+**Mudança de escopo:** melhorar a apresentação visual das tarefas, utilizando etiquetas coloridas para destacar as prioridades (Baixa, Média e Alta) e os status (A Fazer, Em Progresso e Concluído), além de organizar as tarefas em cartões.
 
-**Justificativa:** o cliente fictício precisa acompanhar o andamento das tarefas e identificar quais são mais urgentes. A mudança amplia o sistema inicial e facilita a organização do trabalho da equipe.
+**Justificativa:** o cliente fictício identificou a necessidade de visualizar rapidamente a urgência e o andamento das atividades. A melhoria facilita a leitura das informações e torna a utilização do sistema mais organizada.
 
-**Implementação:** a versão atual do TaskFlow já inclui as funcionalidades de prioridade e status. Para documentar a mudança no GitHub, será criado um card específico no Projects e um commit relacionado à implementação, registrando o desenvolvimento de forma coerente com o histórico do projeto.
+**Implementação:** a melhoria visual foi registrada no commit `c711ec1`, com a mensagem `style: melhora o visual do TaskFlow`. As funcionalidades de prioridade e status já faziam parte da implementação anterior; a mudança documentada corresponde à forma como essas informações são apresentadas na interface.
+
+**Acompanhamento no Kanban:** a melhoria deve ser registrada como um card no GitHub Projects, com sua descrição e evidências correspondentes.
 
 ## 9. UML
 
 Os diagramas de casos de uso e de classes estão na pasta `docs/`.
-
-## 10. Evidências a incluir na entrega
-
-- Captura do quadro GitHub Projects com pelo menos 10 cards.
-- Capturas de commits relevantes (mínimo de 10 commits).
-- Captura do workflow do GitHub Actions concluído com sucesso.
-- Capturas comentadas no documento teórico.
-
-## 11. Situação do projeto
-
-Este repositório é um projeto acadêmico demonstrativo. Antes da entrega, execute os testes, confirme o workflow no GitHub e substitua ou complemente as evidências com capturas reais do seu repositório.

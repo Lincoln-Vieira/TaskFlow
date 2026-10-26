@@ -6,7 +6,7 @@ left to right direction
 
 actor "Equipe / Usuário" as Usuario
 
-rectangle TaskFlow {
+rectangle "TaskFlow" {
   usecase "Cadastrar tarefa" as UC1
   usecase "Listar tarefas" as UC2
   usecase "Editar tarefa" as UC3
@@ -24,4 +24,4 @@ Usuario --> UC6
 @enduml
 ```
 
-**Leitura:** o usuário interage com o TaskFlow para cadastrar, consultar, alterar e excluir tarefas, além de definir sua prioridade e atualizar seu status.
+**Leitura:** O usuário pode cadastrar, listar, editar e excluir tarefas, além de definir prioridades e atualizar o status.
