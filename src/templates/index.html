@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow | Gerenciador de tarefas</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 1000px; margin: 36px auto; padding: 0 16px; background: #f5f7fb; color: #202938; }
+    h1 { margin-bottom: 4px; } .muted { color: #667085; }
+    .panel, .task { background: white; border: 1px solid #e3e7ef; border-radius: 12px; padding: 18px; margin: 16px 0; }
+    input, textarea, select, button { font: inherit; padding: 9px; margin: 5px 4px 5px 0; border: 1px solid #cbd2df; border-radius: 7px; }
+    input[name=title] { min-width: 240px; } textarea { width: min(95%, 560px); vertical-align: top; }
+    button { cursor: pointer; background: #2146a6; color: white; border: 0; }
+    button.delete { background: #a72c36; } .task h3 { margin: 0 0 8px; }
+    .meta { font-size: .9rem; color: #667085; }
+    form.inline { display: inline-block; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <h1>TaskFlow</h1>
+  <p class="muted">Sistema simples de gerenciamento de tarefas com metodologia ágil.</p>
+
+  <section class="panel">
+    <h2>Nova tarefa</h2>
+    <form action="/tasks" method="post">
+      <input name="title" placeholder="Título da tarefa" required maxlength="100">
+      <select name="priority" aria-label="Prioridade">
+        <option>Baixa</option><option selected>Média</option><option>Alta</option>
+      </select><br>
+      <textarea name="description" placeholder="Descrição (opcional)" rows="2"></textarea><br>
+      <button type="submit">Cadastrar tarefa</button>
+    </form>
+  </section>
+
+  <h2>Tarefas cadastradas ({{ tasks|length }})</h2>
+  {% if not tasks %}<p class="muted">Ainda não há tarefas. Cadastre a primeira acima.</p>{% endif %}
+  {% for task in tasks %}
+  <article class="task">
+    <h3>#{{ task.id }} — {{ task.title }}</h3>
+    <p>{{ task.description or "Sem descrição." }}</p>
+    <p class="meta">Prioridade: {{ task.priority }} · Status: {{ task.status }}</p>
+    <form class="inline" action="/tasks/{{ task.id }}/update" method="post">
+      <input name="title" value="{{ task.title }}" required aria-label="Título">
+      <select name="priority" aria-label="Prioridade">
+        {% for priority in ["Baixa", "Média", "Alta"] %}
+        <option value="{{ priority }}" {% if task.priority == priority %}selected{% endif %}>{{ priority }}</option>
+        {% endfor %}
+      </select>
+      <select name="status" aria-label="Status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if task.status == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select><br>
+      <textarea name="description" rows="2" aria-label="Descrição">{{ task.description }}</textarea><br>
+      <button type="submit">Salvar alterações</button>
+    </form>
+    <form class="inline" action="/tasks/{{ task.id }}/delete" method="post" onsubmit="return confirm('Excluir esta tarefa?')">
+      <button class="delete" type="submit">Excluir</button>
+    </form>
+  </article>
+  {% endfor %}
+</body>
+</html>
