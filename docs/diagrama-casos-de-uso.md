@@ -24,4 +24,6 @@ Usuario --> UC6
 @enduml
 ```
 
+![Diagrama UML de casos de uso](diagrama-casos-de-uso.png)
+
 **Leitura:** O usuário pode cadastrar, listar, editar e excluir tarefas, além de definir prioridades e atualizar o status.
