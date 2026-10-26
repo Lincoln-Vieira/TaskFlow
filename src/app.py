@@ -1,8 +1,8 @@
 """Aplicação web TaskFlow usando Flask."""
 
 from flask import Flask, redirect, render_template, request, url_for
+
 from tasks import (
-    VALID_PRIORITIES,
     VALID_STATUSES,
     create_task,
     delete_task,
@@ -50,8 +50,10 @@ def edit_task(task_id):
         )
     except ValueError as error:
         return str(error), 400
+
     if task is None:
         return "Tarefa não encontrada.", 404
+
     return redirect(url_for("index"))
 
 
