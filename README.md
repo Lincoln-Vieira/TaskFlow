@@ -24,6 +24,12 @@ O TaskFlow é uma aplicação web acadêmica que simula o gerenciamento de taref
 
 Será utilizado Kanban para visualizar o trabalho nas colunas **A Fazer**, **Em Progresso** e **Concluído**. As tarefas serão pequenas, priorizadas e movimentadas conforme o avanço. O GitHub Projects será utilizado para acompanhar o quadro.
 
+## Links do projeto
+
+- **Repositório GitHub:** https://github.com/Lincoln-Vieira/TaskFlow
+- **Quadro Kanban (GitHub Projects):** https://github.com/users/Lincoln-Vieira/projects/3/views/1
+- **Integração contínua (GitHub Actions):** https://github.com/Lincoln-Vieira/TaskFlow/actions
+
 ## 5. Como executar localmente
 
 Requer Python 3.10 ou superior.
