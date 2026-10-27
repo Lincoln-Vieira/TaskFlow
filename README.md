@@ -22,7 +22,7 @@ O TaskFlow é uma aplicação web acadêmica que simula o gerenciamento de taref
 
 ## 4. Metodologia
 
-Será utilizado Kanban para visualizar o trabalho nas colunas **A Fazer**, **Em Progresso** e **Concluído**. As tarefas serão pequenas, priorizadas e movimentadas conforme o avanço. O GitHub Projects será utilizado para acompanhar o quadro.
+O projeto utiliza Kanban para organizar e acompanhar as atividades nas colunas **A Fazer**, **Em Progresso** e **Concluído**. As tarefas são organizadas em cards no GitHub Projects e movimentadas conforme o andamento do desenvolvimento.
 
 ## Links do projeto
 
@@ -72,8 +72,25 @@ Nesta primeira versão, as tarefas ficam armazenadas em memória. Isso significa
 
 **Implementação:** a melhoria visual foi registrada no commit `c711ec1`, com a mensagem `style: melhora o visual do TaskFlow`. As funcionalidades de prioridade e status já faziam parte da implementação anterior; a mudança documentada corresponde à forma como essas informações são apresentadas na interface.
 
-**Acompanhamento no Kanban:** a melhoria deve ser registrada como um card no GitHub Projects, com sua descrição e evidências correspondentes.
+**Acompanhamento no Kanban:** a melhoria visual está registrada no GitHub Projects como uma atividade do projeto. O quadro é utilizado para acompanhar as tarefas concluídas e as etapas que ainda estão em andamento.
 
 ## 9. UML
 
 Os diagramas de casos de uso e de classes estão na pasta `docs/`.
+
+## 10. Evidências da entrega
+
+As evidências do desenvolvimento estão organizadas na pasta `docs/` e incluem:
+
+- Captura do quadro Kanban do GitHub Projects.
+- Captura da execução do GitHub Actions concluída com sucesso.
+- Histórico de commits do repositório.
+- Imagens dos diagramas UML de casos de uso e de classes.
+
+## 11. Situação do projeto
+
+O TaskFlow é um projeto acadêmico desenvolvido com Python e Flask. A aplicação possui operações de cadastro, listagem, edição e exclusão de tarefas, com prioridade e status.
+
+Os testes automatizados e a verificação de qualidade foram executados localmente com sucesso. A integração contínua também apresentou uma execução bem-sucedida no GitHub Actions.
+
+O projeto continua utilizando armazenamento em memória, sem banco de dados ou autenticação de usuários.
